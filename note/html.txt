@@ -1,0 +1,4 @@
+html5 写页面一些要注意的地方：
+表格：h5取消了callsapce 属性，这里可以通过border实现表格的间距问题
+for example:table td{ border:#efdada solid 20px;height:3.7%;}
+bootstrap 的input只能设置width 不能设置height，可以通过margin来实现input来td里面的位置。
