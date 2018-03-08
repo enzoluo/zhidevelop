@@ -5,7 +5,7 @@
 </head>
 <body>
 <script type="text/javascript">
-    window.location.href="loginPage";
+    window.location.href="work";
 
 </script>
 </body>

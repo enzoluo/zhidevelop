@@ -18,15 +18,20 @@ import javax.servlet.http.HttpSession;
 public class WorkController {
 
     @RequestMapping(value = "work")
-    public String work(HttpServletRequest request){
+    public String work(HttpServletRequest request) {
         HttpSession session = request.getSession();
-        int status = (int)session.getAttribute(Msg.USERNAME);
-        if(status == 1){
-            return "portal/workportal";
-        }
-        else {
+        System.out.println(Msg.USERNAME);
+        Object obj = session.getAttribute(Msg.USERNAME);
+        int status;
+        if (obj != null) {
+            status = (int) session.getAttribute(Msg.USERNAME);
+            if (status == 1) {
+                return "portal/workportal";
+            } else {
+                return "login";
+            }
+        } else {
             return "login";
         }
-
     }
 }
