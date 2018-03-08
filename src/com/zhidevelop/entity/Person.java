@@ -21,6 +21,9 @@ public class Person {
     private String sex;
     private String post;
     private String defaultLanuage;
+    private String phone;
+    private String officePhone;
+    private String employeeID;
 
     @Id
     @GeneratedValue
@@ -110,5 +113,32 @@ public class Person {
 
     public void setDefaultLanuage(String defaultLanuage) {
         this.defaultLanuage = defaultLanuage;
+    }
+
+    @Column(name = "phone",length = 11)
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    @Column(name = "office_phone",length = 20)
+    public String getOfficePhone() {
+        return officePhone;
+    }
+
+    public void setOfficePhone(String officePhone) {
+        this.officePhone = officePhone;
+    }
+
+    @Column(name = "employeeID",length = 40)
+    public String getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(String employeeID) {
+        this.employeeID = employeeID;
     }
 }

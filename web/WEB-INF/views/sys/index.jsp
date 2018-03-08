@@ -27,9 +27,6 @@
     <script type="text/javascript">
         var height = $(".link").height();
         var a = $(".link a");
-        console.log(window.screen.height);
-        console.log(window.screen.width);
-
         a.each(function(i){
             $(a[i]).css("line-height",height+"px");
             $(this).click(function(){
@@ -50,7 +47,7 @@
 <!--menu-content end-->
 
 <!--menu-left start-->
-<div class="menu-left">
+<div class="menu-left" id="left">
 
 </div>
 <!--menu-left end-->

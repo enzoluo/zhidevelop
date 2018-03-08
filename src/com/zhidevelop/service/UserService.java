@@ -1,5 +1,6 @@
 package com.zhidevelop.service;
 
+import com.zhidevelop.entity.Person;
 import com.zhidevelop.repository.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,5 +17,9 @@ public class UserService {
     private UserDao userDao;
     public boolean verify(String loginName,String password){
         return userDao.verify(loginName,password);
+    }
+
+    public boolean save(Person person){
+        return userDao.save(person);
     }
 }

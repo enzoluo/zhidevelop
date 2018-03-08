@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加人员</title>
+
+</head>
+<body>
+<div class="zb-content">
+    <div id="zb-data">
+        <form action="/addUser" method="post" id="addUser-form">
+            <table>
+                <tr>
+                    <td class="td-name">姓名:</td>
+                    <td class="td-content" id="name-td">
+                        <input class="input-sm td-input" id="name" type="text" name="name" placeholder="name"/><br/>
+                        <input class="input-sm td-input" type="text" name="englishName" placeholder="EnglishName"/>
+                    </td>
+                    <td class="td-name">编号:</td>
+                    <td class="td-content2"><input class="input-sm td-input2" type="text" name="employeeID"/></td>
+                </tr>
+                <tr>
+                    <td>所在部门:</td>
+                    <td><input class="input-sm td-input" type="text" name="dept"></td>
+                    <td>邮件地址:</td>
+                    <td><input class="input-sm td-input2" type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>手机号码:</td>
+                    <td><input class="input-sm td-input" type="text" name="phone"></td>
+                    <td>办公电话:</td>
+                    <td><input class="input-sm td-input2" type="text" name="officePhone"></td>
+                </tr>
+                <tr>
+                    <td>登录名:</td>
+                    <td><input class="input-sm td-input" type="text" name="loginName"></td>
+                    <td>默认语言:</td>
+                    <td><input class="input-sm td-input2" type="text" name="defaultLanuage"></td>
+                </tr>
+                <tr>
+                    <td>密码:</td>
+                    <td colspan="3"><input class="input-sm" id="pw" type="text" name="password"></td>
+
+                </tr>
+                <tr>
+                    <td>性别:</td>
+                    <td><input class="input-sm td-input" type="text" name="sex"></td>
+                    <td>所属岗位:</td>
+                    <td><input class="input-sm td-input2" type="text" name="post"></td>
+
+                </tr>
+
+            </table>
+        </form>
+    </div>
+
+
+</div>
+<div id="tools">
+    <div id="tool-main">
+        <button type="button" class="btn btn-success tool-button" onclick="$('#addUser-form').submit();">Save</button>
+        <button type="button" class="btn btn-success tool-button">Save & Add</button>
+        <button type="button" class="btn btn-danger tool-button">Close</button>
+    </div>
+</div>
+
+</body>
+</html>

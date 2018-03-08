@@ -15,8 +15,8 @@
 table td{ border:#efdada solid 20px;height:3.7%;}
 #name-td{height:7.4%;}
 #name{margin: 5px auto}
-.zb-content{width:95%;background-color: #00bcd4;margin:1.9% auto;text-align: center;border:green solid 2px;}
-#zb-data{border:black solid 2px;}
+.zb-content{width:65%;background-color: #00bcd4;margin:1.9% auto;text-align: center;float:left;}
+#zb-data{}
 .td-name{width:25.6%;}
 .td-content{width:30.7%;}
 .td-content2{width:30.7%;}
@@ -27,5 +27,25 @@ table td{ border:#efdada solid 20px;height:3.7%;}
 /* table css end*/
 
 /* tools start*/
-#tools{width:20%;height:200px;background-color:red;}
+#tools{width: 25%;height: 456px;background-color: #00bcd4;float: right;margin-top: 32px;margin-right: 165px;}
 /* tools end*/
+/* tool-main start*/
+#tool-main{width:80%;margin:20px auto;}
+.tool-button{margin-left:30px;}
+/* tool-main end*/
+
+/* left menu start */
+#left-content{width: 90%;height: 200px;}
+#left-content a{    display: block;
+    list-style-type: none;
+    height: 30%;
+    width: 111%;
+    margin-top: 4px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 60px;
+    color: white;
+    }
+#left-content a:hover{text-decoration: none;background-color: #18212a;color:white;}
+.left-link-enter-color{background-color: #18212a;}
+/* left menu end */

@@ -273,7 +273,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="statistics.html" class='light'>
+                    <a href="../../../sysMenu/statistics.html" class='light'>
                         <div class="ico"><i class="icon-signal icon-white"></i></div>
                         Statistics
                         <span class="label label-important">3</span>

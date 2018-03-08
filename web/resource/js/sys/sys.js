@@ -1,5 +1,6 @@
 $(function(){
-    $("#content").load("sysmain.html");
+    $("#content").load("sysMenu/sysmain.html");
+    $("#left").load("sysMenu/leftmenu/organization.html");
     $("#one").click(function(){
         one();
     });
@@ -13,11 +14,12 @@ $(function(){
 
 });
 function one(){
-    $("#content").load("sysmain.html");
+    $("#content").load("sysMenu/sysmain.html");
+    $("#left").load("sysMenu/leftmenu/organization.html");
 }
 function two(){
-    $("#content").load("zb02.html");
+    $("#content").load("sysMenu/zb02.html");
 }
 function three(){
-    $("#content").load("zb03.html");
+    $("#content").load("sysMenu/zb03.html");
 }
