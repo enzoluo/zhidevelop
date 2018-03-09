@@ -14,15 +14,6 @@ import javax.servlet.http.HttpServletRequest;
  **/
 @Controller
 public class PageController {
-//    @RequestMapping(value = "login")
-//    public String testPage(HttpServletRequest request, @RequestParam(value = "userName", required = true) String userName, @RequestParam(value = "password", required = true) String password) {
-//        if (userName.equals("enzoluo") && password.equals("123")) {
-//            request.getSession().setAttribute("userName", "userName");
-//            return "portal/workportal";
-//        } else {
-//            return "login";
-//        }
-//    }
 
     @RequestMapping(value = "msg")
     public String msg() {

@@ -20,11 +20,11 @@ public class LoginFilter implements Filter {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         // set filter reseon
         HttpServletRequest request = (HttpServletRequest) req;
-        if (request.getSession().getAttribute("userName") == null) {
-            System.out.println("user not login");
+        if (request.getSession().getAttribute("user") == null) {
+           // System.out.println("user not login");
             req.getRequestDispatcher("loginPage").forward(request, resp);
         } else {
-            System.out.println("user already login");
+            //System.out.println("user already login");
             chain.doFilter(req, resp);
         }
     }

@@ -101,7 +101,7 @@
             success: function (data) {
                var status = data.msg;
                if(status == "success"){
-                   window.location.href="work";
+                   window.location.href="work.do";
                }else {
                    console.log(status);
                     $("#login-msg").css("display","block");
@@ -112,10 +112,6 @@
             }
 
         });
-
-
-
-
     }
 </script>
 <script src="js/jquery.js"></script>
