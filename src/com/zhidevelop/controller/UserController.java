@@ -2,7 +2,6 @@ package com.zhidevelop.controller;
 
 import com.zhidevelop.entity.Person;
 import com.zhidevelop.service.UserService;
-import com.zhidevelop.util.Msg;
 import com.zhidevelop.util.Result;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,14 +35,11 @@ public class UserController {
     @RequestMapping("login")
     public void verify(HttpServletRequest request,HttpServletResponse response,@RequestParam(required = true,value = "loginName") String loginName, @RequestParam(required = true,value = "password") String password) throws Exception{
         response.setCharacterEncoding("utf-8");
-        System.out.println("into");
         PrintWriter out = response.getWriter();
         Result rs = new Result();
         if(userService.verify(loginName,password)){
-            Msg.USERNAME = loginName;
             HttpSession session = request.getSession();
-            Msg.LOGINED_STATUS = 1;
-            session.setAttribute(loginName,Msg.LOGINED_STATUS);
+            session.setAttribute("user",loginName);
             rs.setMsg("success");
         }else {
             rs.setMsg("fail");
@@ -53,9 +49,17 @@ public class UserController {
         out.flush();
         out.close();
     }
+    /**
+     * Method addUser
+     * Description 添加用户
+     * @params HttpServletResponse
+     * @params Person
+     * @return
+     * Date 2018-3-8 16:48
+     * Author EnzoLuo
+     */
     @RequestMapping("addUser")
     public void addUser(HttpServletResponse response,Person person) throws Exception{
-        System.out.println(person.getEmail());
         boolean bool = userService.save(person);
         Result rs = new Result();
         if(bool){
