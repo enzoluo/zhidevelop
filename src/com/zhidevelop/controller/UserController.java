@@ -36,14 +36,11 @@ public class UserController {
     @RequestMapping("login")
     public void verify(HttpServletRequest request,HttpServletResponse response,@RequestParam(required = true,value = "loginName") String loginName, @RequestParam(required = true,value = "password") String password) throws Exception{
         response.setCharacterEncoding("utf-8");
-        System.out.println("into");
         PrintWriter out = response.getWriter();
         Result rs = new Result();
         if(userService.verify(loginName,password)){
-            Msg.USERNAME = loginName;
             HttpSession session = request.getSession();
-            Msg.LOGINED_STATUS = 1;
-            session.setAttribute(loginName,Msg.LOGINED_STATUS);
+            session.setAttribute("user",loginName);
             rs.setMsg("success");
         }else {
             rs.setMsg("fail");
@@ -55,7 +52,7 @@ public class UserController {
     }
     @RequestMapping("addUser")
     public void addUser(HttpServletResponse response,Person person) throws Exception{
-        System.out.println(person.getEmail());
+        System.out.println(person.getName());
         boolean bool = userService.save(person);
         Result rs = new Result();
         if(bool){

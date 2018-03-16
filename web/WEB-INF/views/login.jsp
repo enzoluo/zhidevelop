@@ -26,7 +26,7 @@
     <script src="resource/public/js/jquery-1.8.2.min.js"></script>
     <script src="resource/js/login/zhibo.js"></script>
 </head>
-<body class='login_body'>
+<body class='login_body' onkeydown="enterClick()">
 <div class="wrap">
     <h3>&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the login page</h3>
     <form autocomplete="off" method="post" class="validate">
@@ -36,7 +36,8 @@
                 <div class="email-input">
                     <div class="control-group">
                         <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span>
-                            <input type="text" id="loginName" name="loginName"></div>
+                            <input type="text" id="loginName" name="loginName" autofocus>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +72,8 @@
             <div class="btn-row">
                 <a href="#" class="btn btn-social btn-twitter"><img src="img/twitter.png" alt="">Sign in with
                     Twitter</a>
-                <a href="#" class="btn btn-social btn-fb"><img src="img/facebook.png" alt="">Sign in with Facebook</a>
+                <a href="#" class="btn btn-social btn-fb"><img src="img/facebook.png" alt="">Sign in with
+                    Facebook</a>
             </div>
             <div class="btn-row">
                 <a href="#" class="btn btn-social btn-dr"><img src="img/dribble.png" alt="">Sign in with Dribble</a>
@@ -99,13 +101,13 @@
                 "password": $("#password").val(),
             },
             success: function (data) {
-               var status = data.msg;
-               if(status == "success"){
-                   window.location.href="work";
-               }else {
-                   console.log(status);
-                    $("#login-msg").css("display","block");
-               }
+                var status = data.msg;
+                if (status == "success") {
+                    window.location.href = "work.do";
+                } else {
+                    console.log(status);
+                    $("#login-msg").css("display", "block");
+                }
             },
             error: function () {
                 alert("error");
@@ -114,13 +116,21 @@
         });
 
 
+    }
 
+    capitalTip("password");
 
+    function enterClick(e) {
+        var e = e || window.event;
+        if (e.keyCode == 13) {
+            login();
+        }
     }
 </script>
 <script src="js/jquery.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.metadata.js"></script>
 <script src="js/error.js"></script>
+<script src="resource/js/login/zhibo.js"></script>
 </body>
 </html>

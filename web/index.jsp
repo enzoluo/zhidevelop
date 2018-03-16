@@ -5,7 +5,7 @@
 </head>
 <body>
 <script type="text/javascript">
-    window.location.href="work";
+    window.location.href="work.do";
 
 </script>
 </body>

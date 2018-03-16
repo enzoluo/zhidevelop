@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>智发展</title>
     <link rel="stylesheet" href="resource/public/bootstrap/css/bootstrap.min.css">
     <script src="resource/public/js/jquery-3.2.1.min.js"></script>
     <script src="resource/public/bootstrap/js/bootstrap.min.js"></script>

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ $(document).ready(function() {
   	if($('.error').length > 0){
   		$(".error").fitText(0.4);
   		$(".desc").fitText(8, {minFontSize: '16px'});

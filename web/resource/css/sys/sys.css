@@ -5,6 +5,7 @@
 .menu-logo{float: left;width:8%;margin-top: 1.7%;margin-left:20px;}
 .link{float: left;height:100%;width:57.2%}
 .link a{float: left;list-style-type:none;height:100%;width:9%;margin:0 3px;text-align: center;text-decoration:none;}
+#one{margin-left:30px;}
 .link a:hover{background-color: #2596e4}
 .enter-color{background-color:#2596e4}
 #zb-span01{color:red}
@@ -27,11 +28,11 @@ table td{ border:#efdada solid 20px;height:3.7%;}
 /* table css end*/
 
 /* tools start*/
-#tools{width: 25%;height: 456px;background-color: #00bcd4;float: right;margin-top: 32px;margin-right: 165px;}
+#tools{width: 25%;height: 456px;background-color: #00bcd4;float: right;margin-top: 2%;margin-right: 9%;}
 /* tools end*/
 /* tool-main start*/
 #tool-main{width:80%;margin:20px auto;}
-.tool-button{margin-left:30px;}
+.tool-button{margin-left:5px;}
 /* tool-main end*/
 
 /* left menu start */

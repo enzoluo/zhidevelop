@@ -1,11 +1,50 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Enzo
+  Date: 2018/3/10
+  Time: 10:31
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!--top menu start-->
-
+<div class="style-toggler">
+    <img src="img/icons/fugue/color.png" alt="" class='tip' title="Toggle style-switcher" data-placement="right">
+</div>
+<div class="style-switcher">
+    <h3>Style-switcher</h3>
+    <ul class='color'>
+        <li>
+            <a href="#" class='style'>Default</a>
+        </li>
+        <li>
+            <a href="#" class='blue'>Blue</a>
+        </li>
+        <li>
+            <a href="#" class='green'>Green</a>
+        </li>
+        <li>
+            <a href="#" class='red'>Red</a>
+        </li>
+    </ul>
+    <h3>Pattern-switcher</h3>
+    <ul class='pattern'>
+        <li>
+            <a href="#" class='default'>Default</a>
+        </li>
+        <li>
+            <a href="#" class='dark'>Dark wood</a>
+        </li>
+        <li><a href="#" class='light'>Light</a></li>
+        <li><a href="#" class='wood'>Wood</a></li>
+        <li><a href="#" class='retina-wood'>Retina-wood</a></li>
+        <li><a href="#" class='linen'>Linen</a></li>
+        <li><a href="#" class='paper'>Paper</a></li>
+    </ul>
+</div>
 <div class="topbar">
     <div class="container-fluid">
-        <a href="dashboard.html" class='company'>Neat Admin Template</a>
+        <a href="work.do" class='company'><img src="resource/images/sys/zhidevelop.png"></a>
         <form action="#">
-            <input type="text" value="Search here...">
+            <input type="text" value="Search here...">h
         </form>
         <ul class='mini'>
             <li class='dropdown dropdown-noclose supportContainer'>
@@ -131,7 +170,7 @@
                 </a>
             </li>
             <li>
-                <a href="index.html">
+                <a href="logout">
                     <img src="img/icons/fugue/control-power.png" alt="">
                     Logout
                 </a>
@@ -154,4 +193,3 @@
 
     </div>
 </div>
-<!--top menu end-->
